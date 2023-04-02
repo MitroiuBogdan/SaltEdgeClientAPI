@@ -4,8 +4,6 @@ import com.yllu.vendor.saltedge.rest.client.request.SaltEdgeAttemptRequest;
 import com.yllu.vendor.saltedge.rest.client.request.SaltEdgeRequest;
 import com.yllu.vendor.saltedge.rest.client.request.enrichment.MerchantsInfoRequest;
 import com.yllu.vendor.saltedge.rest.client.request.oauth.CreateOauthConnectionRequestDataSaltEdge;
-import com.ing.casyadapterpoc.vendor.saltedge.rest.client.response.*;
-import com.ing.casyadapterpoc.vendor.saltedge.rest.client.response.ais.*;
 import com.yllu.vendor.saltedge.rest.client.response.*;
 import com.yllu.vendor.saltedge.rest.client.response.ais.*;
 import com.yllu.vendor.saltedge.rest.client.response.connect.SessionData;

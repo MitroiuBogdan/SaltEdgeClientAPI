@@ -6,7 +6,6 @@ import com.yllu.vendor.saltedge.rest.client.request.enrichment.MerchantsInfoRequ
 import com.yllu.vendor.saltedge.rest.client.request.oauth.CreateOauthConnectionRequestDataSaltEdge;
 import com.yllu.vendor.saltedge.rest.client.response.SaltEdgeListResponse;
 import com.yllu.vendor.saltedge.rest.client.response.SaltEdgeResponse;
-import com.ing.casyadapterpoc.vendor.saltedge.rest.client.response.ais.*;
 import com.yllu.vendor.saltedge.rest.client.response.ais.*;
 import com.yllu.vendor.saltedge.rest.client.response.connect.SessionData;
 import com.yllu.vendor.saltedge.rest.client.response.enrichment.MerchantInfo;
