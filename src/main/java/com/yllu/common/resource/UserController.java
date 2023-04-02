@@ -1,6 +1,7 @@
 package com.yllu.common.resource;
 
 import com.yllu.common.domain.entity.User;
+import com.yllu.common.resource.requests.CreateUserRequest;
 import com.yllu.vendor.saltedge.service.UserService;
 import lombok.AllArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
@@ -19,11 +20,11 @@ public class UserController {
 
     private final UserService userService;
 
-    @PostMapping({"users/{identifier}"})
-    public Mono<User> createUser(@PathVariable String identifier) {
-        log.info("Creating user with identifier: {}", identifier);
+    @PostMapping({"users/create"})
+    public Mono<User> createUser(@RequestBody CreateUserRequest createUserRequest) {
+        log.info("Creating user with :{}", createUserRequest.toString());
 
-        return userService.createUser(identifier)
+        return userService.createUser(createUserRequest.getIdentifier())
                 .doOnNext(user -> log.info(buildLogMessage(user)));
     }
 
