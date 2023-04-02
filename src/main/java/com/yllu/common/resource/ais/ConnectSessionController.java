@@ -30,6 +30,8 @@ public class ConnectSessionController {
                 .map(SaltEdgeRequest::new)
                 .orElse(null);
 
+        log.info("createSession -  createSession with: {}", seRequest);
+
         return saltEdgeClient.createSaltEdgeSession(seRequest)
                 .map(SaltEdgeResponse::getData);
     }

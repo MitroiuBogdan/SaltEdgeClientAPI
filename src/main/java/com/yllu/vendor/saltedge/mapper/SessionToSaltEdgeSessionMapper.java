@@ -20,15 +20,14 @@ public class SessionToSaltEdgeSessionMapper {
         }
         SessionRequestSaltEdge target = SessionRequestSaltEdge.builder()
                 .customerId(source.getCustomerId())
-                .providerCode(source.getAspspCode())
-                .dailyRefresh(source.getDailyRefresh())
+//                .providerCode(source.getAspspCode())
+//                .dailyRefresh(source.getDailyRefresh())
                 .consent(SaltEdgeConsent.builder()
                         .scopes(List.of("account_details", "transactions_details"))
-                        .consentValidityDays(90D)
                         .build())
-                .attempt(SaltEdgeAttemptRequest.builder()
-                        .returnTo(source.getReturnBackUrl())
-                        .build())
+//                .attempt(SaltEdgeAttemptRequest.builder()
+//                        .returnTo(source.getReturnBackUrl())
+//                        .build())
                 .build();
 
         return Optional.of(target);

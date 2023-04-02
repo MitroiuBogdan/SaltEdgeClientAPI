@@ -11,6 +11,7 @@ import com.yllu.vendor.saltedge.rest.client.response.enrichment.MerchantInfo;
 import com.yllu.vendor.saltedge.rest.client.response.oauth.CreateOauthConnectionSaltEdgeResponseData;
 import com.yllu.vendor.saltedge.utils.ResponseHelper;
 import lombok.RequiredArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.core.ParameterizedTypeReference;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
@@ -25,6 +26,7 @@ import static org.springframework.web.reactive.function.BodyInserters.fromValue;
 
 @Service
 @RequiredArgsConstructor
+@Slf4j
 public class SaltEdgeClientImpl implements SaltEdgeClient {
 
     private static final String SALTEDGE_ACCOUNT_PATH = "v5/accounts";
@@ -41,6 +43,9 @@ public class SaltEdgeClientImpl implements SaltEdgeClient {
 
     @Override
     public Mono<SaltEdgeResponse<SessionData>> createSaltEdgeSession(SaltEdgeRequest requestBody) {
+        log.info("createSaltEdgeSession - {}", requestBody);
+
+
         return webClient.post()
                 .uri(uriBuilder -> uriBuilder
                         .path(SALTEDGE_CONNECT_PATH + "/create")
