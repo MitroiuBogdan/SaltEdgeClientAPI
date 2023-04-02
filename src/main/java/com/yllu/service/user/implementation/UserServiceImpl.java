@@ -1,7 +1,7 @@
 package com.yllu.service.user.implementation;
 
-import com.yllu.common.domain.entity.User;
-import com.yllu.vendor.saltedge.mapper.SaltedgeUserMapper;
+import com.yllu.domain.User;
+import com.yllu.mapper.SaltedgeUserMapper;
 import com.yllu.service.user.CustomerRemoteService;
 import com.yllu.service.user.UserService;
 import lombok.AllArgsConstructor;

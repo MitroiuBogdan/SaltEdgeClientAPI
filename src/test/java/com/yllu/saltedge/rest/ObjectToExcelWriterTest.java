@@ -1,9 +1,6 @@
 package com.yllu.saltedge.rest;
 
-import com.yllu.common.domain.entity.Account;
-import com.yllu.common.domain.entity.Merchant;
-import com.yllu.common.domain.entity.Transaction;
-import com.yllu.common.utils.ObjectToExcelWriter;
+import com.yllu.utils.ObjectToExcelWriter;
 import lombok.SneakyThrows;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;

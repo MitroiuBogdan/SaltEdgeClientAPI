@@ -1,10 +1,10 @@
 package com.yllu.service.user.implementation;
 
-import com.yllu.vendor.saltedge.rest.client.SaltEdgeClientImpl;
-import com.yllu.vendor.saltedge.rest.client.request.CreateCustomerRequest;
-import com.yllu.vendor.saltedge.rest.client.request.SaltEdgeRequest;
-import com.yllu.vendor.saltedge.rest.client.response.SaltEdgeResponse;
-import com.yllu.vendor.saltedge.rest.client.response.ais.SaltEdgeCustomer;
+import com.yllu.client.rest.client.SaltEdgeClientImpl;
+import com.yllu.client.rest.client.request.CreateCustomerRequest;
+import com.yllu.client.rest.client.request.SaltEdgeRequest;
+import com.yllu.client.rest.client.response.SaltEdgeResponse;
+import com.yllu.client.rest.client.response.ais.SaltEdgeCustomer;
 import com.yllu.service.user.CustomerRemoteService;
 import lombok.AllArgsConstructor;
 import org.springframework.http.ResponseEntity;

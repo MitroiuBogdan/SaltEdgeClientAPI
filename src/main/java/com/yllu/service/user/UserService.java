@@ -1,6 +1,6 @@
 package com.yllu.service.user;
 
-import com.yllu.common.domain.entity.User;
+import com.yllu.domain.User;
 import org.springframework.http.ResponseEntity;
 import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;

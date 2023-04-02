@@ -1,6 +1,6 @@
 package com.yllu.service.user;
 
-import com.yllu.vendor.saltedge.rest.client.response.ais.SaltEdgeCustomer;
+import com.yllu.client.rest.client.response.ais.SaltEdgeCustomer;
 import org.springframework.http.ResponseEntity;
 import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
