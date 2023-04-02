@@ -1,9 +1,9 @@
-package com.yllu.vendor.saltedge.service.implementation;
+package com.yllu.service.user.implementation;
 
 import com.yllu.common.domain.entity.User;
 import com.yllu.vendor.saltedge.mapper.SaltedgeUserMapper;
-import com.yllu.vendor.saltedge.service.CustomerRemoteService;
-import com.yllu.vendor.saltedge.service.UserService;
+import com.yllu.service.user.CustomerRemoteService;
+import com.yllu.service.user.UserService;
 import lombok.AllArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;

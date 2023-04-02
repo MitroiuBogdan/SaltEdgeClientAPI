@@ -1,8 +1,8 @@
-package com.yllu.common.resource;
+package com.yllu.common.resource.ais;
 
 import com.yllu.common.domain.entity.User;
-import com.yllu.common.resource.requests.CreateUserRequest;
-import com.yllu.vendor.saltedge.service.UserService;
+import com.yllu.common.resource.ais.requests.CreateUserRequest;
+import com.yllu.service.user.UserService;
 import lombok.AllArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.ResponseEntity;

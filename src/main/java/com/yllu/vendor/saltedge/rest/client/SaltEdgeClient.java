@@ -2,7 +2,7 @@ package com.yllu.vendor.saltedge.rest.client;
 
 import com.yllu.vendor.saltedge.rest.client.request.SaltEdgeAttemptRequest;
 import com.yllu.vendor.saltedge.rest.client.request.SaltEdgeRequest;
-import com.yllu.vendor.saltedge.rest.client.request.enrichment.MerchantsInfoRequest;
+import com.yllu.vendor.saltedge.rest.client.request.oauth.enrichment.MerchantsInfoRequest;
 import com.yllu.vendor.saltedge.rest.client.request.oauth.CreateOauthConnectionRequestDataSaltEdge;
 import com.yllu.vendor.saltedge.rest.client.response.SaltEdgeListResponse;
 import com.yllu.vendor.saltedge.rest.client.response.SaltEdgeResponse;

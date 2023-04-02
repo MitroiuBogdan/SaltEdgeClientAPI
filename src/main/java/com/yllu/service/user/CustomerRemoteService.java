@@ -1,4 +1,4 @@
-package com.yllu.vendor.saltedge.service;
+package com.yllu.service.user;
 
 import com.yllu.vendor.saltedge.rest.client.response.ais.SaltEdgeCustomer;
 import org.springframework.http.ResponseEntity;

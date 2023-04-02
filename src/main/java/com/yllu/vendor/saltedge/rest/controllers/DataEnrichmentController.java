@@ -1,7 +1,7 @@
 package com.yllu.vendor.saltedge.rest.controllers;
 
 import com.yllu.vendor.saltedge.rest.client.SaltEdgeClientImpl;
-import com.yllu.vendor.saltedge.rest.client.request.enrichment.MerchantsInfoRequest;
+import com.yllu.vendor.saltedge.rest.client.request.oauth.enrichment.MerchantsInfoRequest;
 import com.yllu.vendor.saltedge.rest.client.response.enrichment.MerchantInfo;
 import lombok.AllArgsConstructor;
 import lombok.extern.slf4j.Slf4j;

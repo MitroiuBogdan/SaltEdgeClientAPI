@@ -1,4 +1,4 @@
-package com.yllu.vendor.saltedge.service;
+package com.yllu.service.user;
 
 import com.yllu.common.domain.entity.User;
 import org.springframework.http.ResponseEntity;

@@ -1,4 +1,4 @@
-package com.yllu.common.resource.requests;
+package com.yllu.common.resource.ais.requests;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.*;

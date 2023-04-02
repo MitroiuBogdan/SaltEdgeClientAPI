@@ -1,4 +1,4 @@
-package com.yllu.vendor.saltedge.rest.client.request.enrichment;
+package com.yllu.vendor.saltedge.rest.client.request.oauth.enrichment;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.*;

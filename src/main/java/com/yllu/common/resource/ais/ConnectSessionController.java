@@ -1,10 +1,10 @@
-package com.yllu.vendor.saltedge.rest.controllers;
+package com.yllu.common.resource.ais;
 
 
 import com.yllu.vendor.saltedge.mapper.SessionToSaltEdgeSessionMapper;
 import com.yllu.vendor.saltedge.rest.client.SaltEdgeClientImpl;
 import com.yllu.vendor.saltedge.rest.client.request.SaltEdgeRequest;
-import com.yllu.vendor.saltedge.rest.client.request.connect.SessionRequest;
+import com.yllu.common.resource.ais.requests.InitiateSessionRequest;
 import com.yllu.vendor.saltedge.rest.client.response.SaltEdgeResponse;
 import com.yllu.vendor.saltedge.rest.client.response.connect.SessionData;
 import lombok.AllArgsConstructor;
@@ -15,14 +15,14 @@ import reactor.core.publisher.Mono;
 @Slf4j
 @AllArgsConstructor
 @RestController
-@RequestMapping("/SALTEDGE/session")
+@RequestMapping("session")
 public class ConnectSessionController {
 
     private final SaltEdgeClientImpl saltEdgeClient;
     private final SessionToSaltEdgeSessionMapper toCreateSaltEdgeSession;
 
     @PostMapping("/create")
-    public Mono<SessionData> createSession(@RequestBody SessionRequest request) {
+    public Mono<SessionData> createSession(@RequestBody InitiateSessionRequest request) {
         log.info("createSession - Creating session using request: {}", request.toString());
 
         SaltEdgeRequest seRequest = toCreateSaltEdgeSession
@@ -35,7 +35,7 @@ public class ConnectSessionController {
     }
 
     @PutMapping("/reconnect")
-    public Mono<SessionData> reconnectSession(@RequestBody SessionRequest request) {
+    public Mono<SessionData> reconnectSession(@RequestBody InitiateSessionRequest request) {
         log.info("reconnectSession - Reconnecting session using request: {}", request.toString());
 
         SaltEdgeRequest seRequest = toCreateSaltEdgeSession
@@ -49,7 +49,7 @@ public class ConnectSessionController {
     }
 
     @PutMapping("/refresh")
-    public Mono<SessionData> refreshSession(@RequestBody SessionRequest request) {
+    public Mono<SessionData> refreshSession(@RequestBody InitiateSessionRequest request) {
         log.info("refreshSession - Refreshing session using request: {}", request.toString());
 
         SaltEdgeRequest seRequest = toCreateSaltEdgeSession
