@@ -1,17 +1,16 @@
 package com.yllu.common.resource.ais.requests;
 
-import lombok.*;
-
-import javax.validation.constraints.NotNull;
+import com.fasterxml.jackson.annotation.JsonProperty;
+import lombok.Data;
+import lombok.ToString;
 
 @Data
 @ToString
 public class InitiateSessionRequest {
-
-    @NotNull
-    String customerId;
+    @JsonProperty("customerId")
+    private String customerId;
+    String connectionId;
     String aspspCode;
-    String returnBackUrl;
     Boolean dailyRefresh;
 
 }

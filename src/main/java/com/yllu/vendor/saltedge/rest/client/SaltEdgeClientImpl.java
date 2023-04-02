@@ -2,8 +2,8 @@ package com.yllu.vendor.saltedge.rest.client;
 
 import com.yllu.vendor.saltedge.rest.client.request.SaltEdgeAttemptRequest;
 import com.yllu.vendor.saltedge.rest.client.request.SaltEdgeRequest;
-import com.yllu.vendor.saltedge.rest.client.request.oauth.enrichment.MerchantsInfoRequest;
 import com.yllu.vendor.saltedge.rest.client.request.oauth.CreateOauthConnectionRequestDataSaltEdge;
+import com.yllu.vendor.saltedge.rest.client.request.oauth.enrichment.MerchantsInfoRequest;
 import com.yllu.vendor.saltedge.rest.client.response.*;
 import com.yllu.vendor.saltedge.rest.client.response.ais.*;
 import com.yllu.vendor.saltedge.rest.client.response.connect.SessionData;
@@ -29,22 +29,21 @@ import static org.springframework.web.reactive.function.BodyInserters.fromValue;
 @Slf4j
 public class SaltEdgeClientImpl implements SaltEdgeClient {
 
-    private static final String SALTEDGE_ACCOUNT_PATH = "v5/accounts";
-    private static final String SALTEDGE_TRASACTION_PATH = "v5/transactions";
-    private static final String SALTEDGE_CONNECT_PATH = "v5/connect_sessions";
-    private static final String SALTEDGE_OAUTH_PATH = "/v5/oauth_providers";
-    private static final String SALTEDGE_CONNECTIONS_PATH = "/v5/connections";
-    private static final String SALTEDGE_CUSTOMER_PATH = "/v5/customers";
-    private static final String SALTEDGE_PROVIDER_PATH = "/v5/providers";
-    private static final String SALTEDGE_MERCHANT_PATH = "/v5/merchants";
-    private static final String SALTEDGE_ENRICHMENT_PATH = "/v5/enrichment";
+    private static final String SALTEDGE_ACCOUNT_PATH = "/api/v5/accounts";
+    private static final String SALTEDGE_TRASACTION_PATH = "/api/v5/transactions";
+    private static final String SALTEDGE_CONNECT_PATH = "/api/v5/connect_sessions";
+    private static final String SALTEDGE_OAUTH_PATH = "/api/v5/oauth_providers";
+    private static final String SALTEDGE_CONNECTIONS_PATH = "/api/v5/connections";
+    private static final String SALTEDGE_CUSTOMER_PATH = "/api/v5/customers";
+    private static final String SALTEDGE_PROVIDER_PATH = "/api/v5/providers";
+    private static final String SALTEDGE_MERCHANT_PATH = "/api/v5/merchants";
+    private static final String SALTEDGE_ENRICHMENT_PATH = "/api/v5/enrichment";
 
     private final WebClient webClient;
 
     @Override
     public Mono<SaltEdgeResponse<SessionData>> createSaltEdgeSession(SaltEdgeRequest requestBody) {
         log.info("createSaltEdgeSession - {}", requestBody);
-
 
         return webClient.post()
                 .uri(uriBuilder -> uriBuilder

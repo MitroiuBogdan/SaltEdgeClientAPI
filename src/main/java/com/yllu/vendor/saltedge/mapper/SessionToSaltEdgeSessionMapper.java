@@ -20,8 +20,9 @@ public class SessionToSaltEdgeSessionMapper {
         }
         SessionRequestSaltEdge target = SessionRequestSaltEdge.builder()
                 .customerId(source.getCustomerId())
-//                .providerCode(source.getAspspCode())
-//                .dailyRefresh(source.getDailyRefresh())
+                .connectionId(source.getConnectionId())
+                .providerCode(source.getAspspCode())
+                .dailyRefresh(source.getDailyRefresh())
                 .consent(SaltEdgeConsent.builder()
                         .scopes(List.of("account_details", "transactions_details"))
                         .build())
