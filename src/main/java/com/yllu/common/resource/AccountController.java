@@ -1,4 +1,4 @@
-package com.yllu.common.controller;
+package com.yllu.common.resource;
 
 import com.yllu.common.domain.Vendor;
 import com.yllu.common.domain.entity.Account;
