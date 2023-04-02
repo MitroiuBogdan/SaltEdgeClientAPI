@@ -9,10 +9,9 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.ing</groupId>
-	<artifactId>casy-adapter-poc</artifactId>
+	<artifactId>SaltEdgeClientAPI</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>casy-adapter-poc</name>
-	<description>PoC to evaluate new vendor</description>
+	<name>SaltEdgeClientAPI</name>
 	<properties>
 		<java.version>11</java.version>
 	</properties>
