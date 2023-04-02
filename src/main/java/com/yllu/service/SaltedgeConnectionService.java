@@ -7,7 +7,7 @@ import com.yllu.client.rest.client.request.SaltEdgeRequest;
 import com.yllu.client.rest.client.response.SaltEdgeResponse;
 import com.yllu.client.rest.client.response.ais.SaltedgeDeleteResponse;
 import com.yllu.domain.Connection;
-import com.yllu.vendor.saltedge.mapper.SaltedgeConnectionToGrantMapper;
+import com.yllu.mapper.SaltedgeConnectionToConnectionMapper;
 import lombok.AllArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
@@ -28,7 +28,7 @@ public class SaltedgeConnectionService {
                 .build();
         return saltEdgeClient.refreshConnectionById(connectionId, new SaltEdgeRequest<>(attempt))
                 .doOnNext(refreshResponse -> log.info("refreshById - refresh succeeded for connection {}", refreshResponse.getData()))
-                .map(refreshResponse -> SaltedgeConnectionToGrantMapper.SALTEDGE_CONNECTION_TO_GRANT_MAPPER.apply(refreshResponse.getData()));
+                .map(refreshResponse -> SaltedgeConnectionToConnectionMapper.SALTEDGE_CONNECTION_TO_CONNECTION_MAPPER.apply(refreshResponse.getData()));
     }
 
     public Mono<SaltedgeDeleteResponse> deleteById(String connectionId) {
@@ -41,7 +41,7 @@ public class SaltedgeConnectionService {
         return saltEdgeClient.getById(connectionId)
                 .map(SaltEdgeResponse::getData)
                 .doOnNext(saltedgeConnection -> log.info("getById - received connection from saltedge: {}", saltedgeConnection))
-                .map(SaltedgeConnectionToGrantMapper.SALTEDGE_CONNECTION_TO_GRANT_MAPPER);
+                .map(SaltedgeConnectionToConnectionMapper.SALTEDGE_CONNECTION_TO_CONNECTION_MAPPER);
 
     }
 }
