@@ -1,4 +1,4 @@
-package com.yllu.service.aspsp;
+package com.yllu.service;
 
 import com.yllu.domain.Aspsp;
 import com.yllu.client.rest.client.SaltEdgeClient;

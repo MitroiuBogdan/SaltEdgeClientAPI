@@ -1,7 +1,7 @@
 package com.yllu.resource.ais;
 
 import com.yllu.domain.Aspsp;
-import com.yllu.service.aspsp.SaltedgeAspspService;
+import com.yllu.service.SaltedgeAspspService;
 import lombok.AllArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.web.bind.annotation.GetMapping;

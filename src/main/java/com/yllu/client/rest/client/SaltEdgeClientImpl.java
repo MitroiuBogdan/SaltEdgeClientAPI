@@ -28,12 +28,10 @@ public class SaltEdgeClientImpl implements SaltEdgeClient {
     private static final String SALTEDGE_ACCOUNT_PATH = "/api/v5/accounts";
     private static final String SALTEDGE_TRASACTION_PATH = "/api/v5/transactions";
     private static final String SALTEDGE_CONNECT_PATH = "/api/v5/connect_sessions";
-    private static final String SALTEDGE_OAUTH_PATH = "/api/v5/oauth_providers";
     private static final String SALTEDGE_CONNECTIONS_PATH = "/api/v5/connections";
     private static final String SALTEDGE_CUSTOMER_PATH = "/api/v5/customers";
     private static final String SALTEDGE_PROVIDER_PATH = "/api/v5/providers";
-    private static final String SALTEDGE_MERCHANT_PATH = "/api/v5/merchants";
-    private static final String SALTEDGE_ENRICHMENT_PATH = "/api/v5/enrichment";
+
 
     private final WebClient webClient;
 
